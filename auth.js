@@ -1,6 +1,6 @@
 "use strict";
 const h = B.el, form = B.$("#form");
-if (B.me()) location.replace("home.html"); // already logged in
+if (B.me()) location.replace("home.html");
 const FIELDS = {
   login: [["id", "Username or email", "text", "username"], ["pw", "Password", "password", "current-password"]],
   signup: [["user", "Username", "text", "username"], ["email", "Email", "email", "email"], ["pw", "Password", "password", "new-password"], ["pw2", "Confirm password", "password", "new-password"]]
@@ -34,7 +34,7 @@ function render() {
   };
 }
 render();
-/* Poster wall: uniform columns, shuffled posters, one constant speed (px/s), alternating direction */
+
 const SPEED = 30, GAP = 14, wall = B.$("#wall");
 function build(posters) {
   const n = innerWidth > 1200 ? 8 : innerWidth > 800 ? 6 : innerWidth > 520 ? 4 : 3, cw = (innerWidth - GAP * (n - 1)) / n, ch = cw * 1.5, per = Math.ceil(innerHeight / (ch + GAP)) + 2, pool = B.shuffle(posters);

@@ -1,20 +1,19 @@
 
 "use strict";
 
-// Redirect logged-in users to home
+
 if (window.B && B.me()) {
   location.replace("home.html");
 }
 
-// TMDB configuration
 const API_KEY = window.BRAMBO_CONFIG?.apiKey || "";
 const API_URL = "https://api.themoviedb.org/3";
 const IMAGE_URL = "https://image.tmdb.org/t/p/w342";
 
-// Select elements
+
 const $ = (selector) => document.querySelector(selector);
 
-// Fetch series from TMDB
+
 async function getSeries(endpoint) {
   const response = await fetch(
     `${API_URL}${endpoint}?api_key=${API_KEY}`
@@ -28,7 +27,7 @@ async function getSeries(endpoint) {
   return data.results || [];
 }
 
-// Create a series poster
+
 function createPoster(show) {
   const item = document.createElement("li");
   item.className = "poster-item";
@@ -55,7 +54,7 @@ function createPoster(show) {
   return item;
 }
 
-// Display series inside an existing HTML row
+
 async function displaySeries(rowName, endpoint) {
   const container = $(
     `[data-row="${rowName}"] [data-row-body]`
@@ -84,7 +83,7 @@ async function displaySeries(rowName, endpoint) {
   }
 }
 
-// Display hero background
+
 async function displayHero() {
   const image = $("#hero-image");
 
@@ -117,7 +116,7 @@ async function displayHero() {
   }
 }
 
-// Navigation menu
+
 const menuToggle = $("#menu-toggle");
 const siteMenu = $("#site-menu");
 
@@ -127,12 +126,12 @@ if (menuToggle && siteMenu) {
   });
 }
 
-// Current year
+
 if ($("#year")) {
   $("#year").textContent = new Date().getFullYear();
 }
 
-// Load all series
+
 async function loadPage() {
   if (!API_KEY) {
     console.error("Please add your TMDB API key in config.js");

@@ -1,10 +1,5 @@
 "use strict";
 
-/* =========================================================
-   Brambo — Live API Script
-   ========================================================= */
-
-/* Logged-in visitors skip the landing page. */
 if (window.B && B.me()) location.replace("home.html");
 
 const TMDB_API_KEY = (window.BRAMBO_CONFIG && window.BRAMBO_CONFIG.apiKey) || ""; // set in config.js
@@ -106,7 +101,7 @@ const streamingFilters = () => ({
   without_genres: NOISE_GENRES,
 });
 
-/* Standard Rows definitions */
+
 const ROWS = [
   {
     id: "popular",
@@ -149,9 +144,7 @@ const ROWS = [
 const shownIds = new Set();
 let authFailed = false;
 
-/* =========================================================
-   TOP RATED FEATURE BLOCK (Dynamic 6 items, 3 per page)
-   ========================================================= */
+
 let topRatedAllSeries = [];
 let topRatedPageIndex = 0;
 
@@ -289,9 +282,7 @@ function renderTopRatedPage(pageIndex) {
   container.replaceChildren(wrapper);
 }
 
-/* =========================================================
-   Hero Backdrop
-   ========================================================= */
+
 const heroImage = $("#hero-image");
 const heroCredit = $("#hero-credit");
 const heroCreditName = $("#hero-credit-name");
@@ -347,9 +338,7 @@ async function loadUniqueHeroBackdrop() {
   }
 }
 
-/* =========================================================
-   Rendering Standard Posters
-   ========================================================= */
+
 function createPosterCard(show) {
   const item = document.createElement("li");
 
@@ -574,8 +563,7 @@ if (yearNode) yearNode.textContent = String(new Date().getFullYear());
 
 initSeries();
 
-/* Landing page: every action sends the visitor to login/signup.
-   Exempt: menu toggle, carousel arrows, in-page section links, external links. */
+
 document.addEventListener("click", (event) => {
   const t = event.target.closest("a, button, .poster-card, .feature-card");
   if (!t) return;
