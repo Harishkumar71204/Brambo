@@ -1,0 +1,6 @@
+{
+  "_comment": "DEV ONLY. Accounts created in MongoDB by `npm run seed` (passwords are hashed there). Do not reuse these passwords anywhere real.",
+  "users": [
+    { "username": "demo", "email": "demo@brambo.app", "password": "demo12345" }
+  ]
+}
