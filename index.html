@@ -8,11 +8,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="brambo.png">
 </head>
 <body>
   <a href="#discover" class="skip-link">Skip to main content</a>
 
-  <!-- Header -->
+  
   <header class="site-header" id="site-header">
     <div class="wrap header-inner">
       <a href="#" class="brand" aria-label="Brambo Home">
@@ -40,7 +41,7 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  
   <section class="hero" id="hero">
     <div class="hero-media">
       <img id="hero-image" class="hero-image" src="" alt="" />
@@ -69,24 +70,24 @@
     </div>
   </section>
 
-  <!-- Discover Section -->
+ 
   <main class="discover" id="discover">
     <div class="wrap">
 
-      <!-- Setup Notice for missing API Key -->
+      
       <div class="setup-notice" id="setup-notice" hidden role="alert">
         <h2 id="setup-title">TMDB API Key Required</h2>
         <p id="setup-message"></p>
       </div>
 
-      <!-- Top Rated Feature Cards Block (6 items, 3 per page, arrows to toggle) -->
+      
       <section class="series-row top-rated-feature-row" data-row="top-rated-feature">
         <div class="feature-block-container" data-row-body>
-          <!-- Loaded dynamically via JS -->
+        
         </div>
       </section>
 
-      <!-- Popular Series Row -->
+      
       <section class="series-row" data-row="popular">
         <header class="row-head">
           <h2 class="row-title">Popular TV Series</h2>
@@ -95,7 +96,7 @@
         <div data-row-body></div>
       </section>
 
-      <!-- New & Recent Releases Row -->
+     
       <section class="series-row" data-row="new">
         <header class="row-head">
           <h2 class="row-title">New Releases</h2>
@@ -104,7 +105,7 @@
         <div data-row-body></div>
       </section>
 
-      <!-- Netflix Series Row -->
+      
       <section class="series-row" data-row="netflix">
         <header class="row-head">
           <h2 class="row-title">Popular on Netflix</h2>
@@ -113,7 +114,7 @@
         <div data-row-body></div>
       </section>
 
-      <!-- HBO Series Row -->
+      
       <section class="series-row" data-row="hbo">
         <header class="row-head">
           <h2 class="row-title">HBO Originals</h2>
@@ -122,8 +123,8 @@
         <div data-row-body></div>
       </section>
 
-      <!-- Discover More Row -->
-      <section class="series-row" data-row="more">
+ 
+     <section class="series-row" data-row="more">
         <header class="row-head">
           <h2 class="row-title">More to Explore</h2>
           <p class="row-sub">Broad selection of hidden gems and fan favorites</p>
@@ -134,7 +135,7 @@
     </div>
   </main>
 
-  <!-- How It Works -->
+  
   <section class="how" id="how">
     <div class="wrap">
       <h2 class="section-title">How Brambo Works</h2>
@@ -162,7 +163,7 @@
     </div>
   </section>
 
-  <!-- About Section -->
+ 
   <section class="about" id="about">
     <div class="wrap about-grid">
       <div>
@@ -179,7 +180,6 @@
     </div>
   </section>
 
-  <!-- Final CTA -->
   <section class="cta">
     <div class="wrap cta-inner">
       <div class="cta-copy">
@@ -192,7 +192,7 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-grid">
@@ -231,7 +231,7 @@
     </div>
   </footer>
 
-  <!-- Modal Dialog -->
+ 
   <dialog id="auth-dialog" class="dialog">
     <div class="dialog-panel">
       <button type="button" class="dialog-close" data-close aria-label="Close modal">✕</button>
