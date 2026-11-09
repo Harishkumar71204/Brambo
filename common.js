@@ -21,11 +21,7 @@ B.tmdb = (path, params = {}) => {
   if (!cache.has(k)) cache.set(k, fetch(u, { headers: hd }).then(r => { if (!r.ok) { cache.delete(k); throw new Error(r.status); } return r.json(); }).catch(e => { cache.delete(k); throw e; }));
   return cache.get(k);
 };
-/* ---- accounts ----
-   Passwords/login live on the server (server/server.js, MongoDB). The browser keeps only:
-     brambo.token   JWT from /api/login or /api/signup
-     brambo.session id of the logged-in user
-     brambo.users   per-user activity (progress, watch later, favourites, reviews) cached locally */
+
 const U = "brambo.users", S = "brambo.session", T = "brambo.token";
 const all = () => { try { return JSON.parse(localStorage.getItem(U)) || {}; } catch { return {}; } };
 B.users = all;
