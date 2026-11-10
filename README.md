@@ -21,31 +21,6 @@ Authentication	JSON Web Tokens (JWT), bcryptjs
 External data	TMDB API
 Other backend packages	CORS, dotenv
 
-
-Project Structure
-Brambo-main/
-├── index.html              # Public landing and discovery page
-├── home.html               # Signed-in user dashboard
-├── auth.html               # Login and registration
-├── profile.html            # User profile and activity statistics
-├── reviews.html            # Personal and community reviews
-├── editors.html            # Curated series and filters
-├── config.js               # Frontend API configuration
-├── common.js               # Shared frontend utilities and state
-├── script.js               # Landing-page series discovery
-├── home.js                 # Dashboard functionality
-├── auth.js                 # Login and registration interface
-├── profile.js              # Profile functionality
-├── reviews.js              # Reviews functionality
-├── editors.js              # Editor's choice functionality
-├── style.css
-├── app.css
-├── auth.css
-└── server/
-    ├── server.js           # Express authentication API
-    ├── seed.js             # Development account seeding helper
-    ├── package.json
-    └── .env.example        # Backend environment variable template
 Requirements
 Install the following before running the project:
 - Node.js 18 or later
